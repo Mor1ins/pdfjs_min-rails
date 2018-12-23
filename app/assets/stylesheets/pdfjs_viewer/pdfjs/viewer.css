@@ -219,7 +219,6 @@
 .pdfViewer .canvasWrapper {
   overflow: hidden;
 }
-
 .pdfViewer .page {
   direction: ltr;
   width: 816px;
