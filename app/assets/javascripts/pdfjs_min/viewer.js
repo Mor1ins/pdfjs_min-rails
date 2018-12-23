@@ -17,7 +17,6 @@
   Patch for pdfjs-viewer-rails
  */
 var DEFAULT_URL = window.resourceURL;
-;
 var pdfjsWebLibs;
 {
  pdfjsWebLibs = { pdfjsWebPDFJS: window.pdfjsDistBuildPdf };
@@ -7377,7 +7376,7 @@ var pdfjsWebLibs;
  }.call(pdfjsWebLibs));
 }
 ;
-function getViewerConfiguration() {
+function getViewerConfiguration(filename) {
  return {
   appContainer: document.body,
   mainContainer: document.getElementById('viewerContainer'),
@@ -7482,12 +7481,12 @@ function getViewerConfiguration() {
    lessInfoButton: document.getElementById('errorShowLess')
   },
   printContainer: document.getElementById('printContainer'),
-  openFileInputName: 'fileInput',
+  openFileInputName: filename ? filename : DEFAULT_URL,
   debuggerScriptPath: './debugger.js'
  };
 }
-function webViewerLoad() {
- var config = getViewerConfiguration();
+function webViewerLoad(filename) {
+ var config = getViewerConfiguration(filename);
  window.PDFViewerApplication = pdfjsWebLibs.pdfjsWebApp.PDFViewerApplication;
  pdfjsWebLibs.pdfjsWebApp.PDFViewerApplication.run(config);
 }
