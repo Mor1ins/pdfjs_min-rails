@@ -11,7 +11,7 @@ This guide describes how to update the pdf.js javascript library.
 ├── app
 │   ├── assets
 │   │   ├── javascripts
-│   │   │   └── pdfjs_viewer
+│   │   │   └── pdfjs_min
 │   │   │       ├── application.js
 │   │   │       ├── pdfjs
 │   │   │       │   ├── compatibility.js *
@@ -20,7 +20,7 @@ This guide describes how to update the pdf.js javascript library.
 │   │   │       ├── viewer.js *
 │   │   │       └── viewer_configurations.js
 │   │   └── stylesheets
-│   │       └── pdfjs_viewer
+│   │       └── pdfjs_min
 │   │           ├── application.css
 │   │           ├── full.scss
 │   │           ├── minimal.scss
@@ -38,7 +38,7 @@ This guide describes how to update the pdf.js javascript library.
 
 4. Apply the patches
 
-## `app/assets/javascripts/pdfjs_viewer/viewer.js`:
+## `app/assets/javascripts/pdfjs_min/viewer.js`:
 
 Replace
 ``` javascript
@@ -64,13 +64,13 @@ PDFJS.workerSrc = '/pdfjs/web/pdf.worker.js';
 PDFJS.cMapUrl = '/pdfjs/web/cmaps/';
 ```
 
-## `app/assets/stylesheets/pdfjs_viewer/pdfjs/viewer.css`
+## `app/assets/stylesheets/pdfjs_min/pdfjs/viewer.css`
 
 Replace all `url(images/` with `url(/pdfjs/web/images/`
 
-## `app/views/pdfjs_viewer/viewer/_viewer.html.erb`
+## `app/views/pdfjs_min/viewer/_viewer.html.erb`
 
-Replace the whole content of `app/views/pdfjs_viewer/viewer/_viewer.html.erb` with `web/viewer.html` from the new pdf.js release.
+Replace the whole content of `app/views/pdfjs_min/viewer/_viewer.html.erb` with `web/viewer.html` from the new pdf.js release.
 
 ##
 
@@ -85,9 +85,9 @@ at the top of the file before `<!DOCTYPE html>`
 
 Replace all children of `<head>` except the `<meta>` tags with
 ```html
-<%= render "pdfjs_viewer/viewer/head", title: title, pdf_url: pdf_url %>
+<%= render "pdfjs_min/viewer/head", title: title, pdf_url: pdf_url %>
 ```
 
 ##
 
-At the bottom of the file insert `<%= render "pdfjs_viewer/viewer/printcontainer" %>` after `<div id="printContainer"></div>`
+At the bottom of the file insert `<%= render "pdfjs_min/viewer/printcontainer" %>` after `<div id="printContainer"></div>`

@@ -57,14 +57,14 @@ class ViewerTest < ActionDispatch::IntegrationTest
     end
   end
 
-  test "pdfjs viewer verbosity is set with ENV variable" do
+  test "pdfjs min verbosity is set with ENV variable" do
     begin
       {
         errors: 0,
         warnings: 1,
         infos: 5
       }.each do |level, number|
-        ENV["PDFJS_VIEWER_VERBOSITY"] = level.to_s
+        ENV["PDFJS_MIN_VERBOSITY"] = level.to_s
         capture(:stdout) do
           visit "/"
           click_on "full viewer"
@@ -72,7 +72,7 @@ class ViewerTest < ActionDispatch::IntegrationTest
         assert_equal number, page.evaluate_script("PDFJS.verbosity")
       end
     ensure
-      ENV.delete("PDFJS_VIEWER_VERBOSITY")
+      ENV.delete("PDFJS_MIN_VERBOSITY")
     end
   end
 
