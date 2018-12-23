@@ -2,6 +2,10 @@
 
 [![Build Status](https://travis-ci.org/senny/pdfjs_viewer-rails.svg?branch=master)](https://travis-ci.org/senny/pdfjs_viewer-rails)
 
+## Different
+
+Removed border and margin from pages in minimal style. 
+
 ## Installation
 
 Add this line to your application's Gemfile:
