@@ -11,7 +11,7 @@ Removed border and margin from pages in minimal style.
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'pdfjs_viewer-rails'
+gem 'pdfjs_min-rails'
 ```
 
 *Note: pdfjs_viewer-rails is still in early development. Please report if you encounter any issues along the way.*

@@ -15,7 +15,7 @@ require "rails"
 end
 
 Bundler.require(*Rails.groups)
-require "pdfjs_viewer-rails"
+require "pdfjs_min-rails"
 
 module Dummy
   class Application < Rails::Application

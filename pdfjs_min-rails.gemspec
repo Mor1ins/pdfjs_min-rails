@@ -11,7 +11,7 @@ Gem::Specification.new do |s|
   s.email       = ['kuliev.ed@gmail.com']
   s.homepage    = 'https://github.com/Mor1ins/pdfjs_min-rails'
   s.summary     = 'Simple PDF.js viewer packaged as a Rails engine.'
-  s.description = 'Fork of pdfjs_viewer-rails with removed margin and border.'
+  s.description = 'Fork of pdfjs_min-rails with removed margin and border.'
   s.license     = 'MIT'
 
   s.files = Dir['{app,config,db,lib,public}/**/*', 'MIT-LICENSE', 'Rakefile', 'README.md']
