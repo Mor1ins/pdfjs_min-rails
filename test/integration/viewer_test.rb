@@ -9,7 +9,7 @@ class ViewerTest < ActionDispatch::IntegrationTest
     visit "/"
     output = capture(:stdout) do
       click_on "full viewer"
-      assert_equal 1, all("#pdfjs_viewer-full").size
+      assert_equal 1, all("#pdfjs_min-full").size
       sleep @time_to_render
     end
 
@@ -20,7 +20,7 @@ class ViewerTest < ActionDispatch::IntegrationTest
     visit "/"
     output = capture(:stdout) do
       click_on "reduced viewer"
-      assert_equal 1, all("#pdfjs_viewer-reduced").size
+      assert_equal 1, all("#pdfjs_min-reduced").size
       sleep @time_to_render
     end
 
@@ -31,7 +31,7 @@ class ViewerTest < ActionDispatch::IntegrationTest
     visit "/"
     output = capture(:stdout) do
       click_on "minimal viewer"
-      assert_equal 1, all("#pdfjs_viewer-minimal").size
+      assert_equal 1, all("#pdfjs_min-minimal").size
       sleep @time_to_render
     end
 
@@ -42,7 +42,7 @@ class ViewerTest < ActionDispatch::IntegrationTest
     visit "/"
     output = capture(:stdout) do
       click_on "helper"
-      assert_equal 1, all("#pdfjs_viewer-minimal").size
+      assert_equal 1, all("#pdfjs_min-minimal").size
       sleep @time_to_render
     end
 

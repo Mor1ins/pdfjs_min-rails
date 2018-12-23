@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-# Declare your gem's dependencies in pdfjs_viewer.gemspec.
+# Declare your gem's dependencies in pdfjs_min.gemspec.
 # Bundler will treat runtime dependencies like base dependencies, and
 # development dependencies will be added by default to the :development group.
 gemspec
@@ -12,7 +12,7 @@ gemspec
 
 # To use a debugger
 # gem 'byebug', group: [:development, :test]
-
+gem 'rake'
 group :test do
   gem 'capybara', '>= 2.1'
   gem 'poltergeist', '~> 1.5'

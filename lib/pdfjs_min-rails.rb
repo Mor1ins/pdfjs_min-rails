@@ -1,5 +1,5 @@
-require "pdfjs_viewer-rails/version"
-require "pdfjs_viewer-rails/helpers"
+require "pdfjs_min-rails/version"
+require "pdfjs_min-rails/helpers"
 
 module PdfjsViewer
   module Rails
